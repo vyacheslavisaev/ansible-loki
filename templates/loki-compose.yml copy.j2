@@ -1,0 +1,18 @@
+---
+version: '2'
+
+services:
+    loki:
+        image: grafana/loki
+        ports:
+            - "3100:3100"
+        volumes:
+            "{{loki_config_path}}":/etc/loki
+        #-config.file=/mnt/config/{{loki_config_file}}
+
+#    promtail:
+#        image: grafana/promtail:2.3.0
+#        volumes:
+#            "{{loki_config_path}}":/etc/loki
+#            /var/log:/var/log
+#        # -config.file=/etc/loki/{{promtail_config_file}}

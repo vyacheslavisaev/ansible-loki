@@ -1,0 +1,10 @@
+---
+version: '2'
+
+services:
+    loki:
+        image: grafana/loki
+        ports:
+            - "3100:3100"
+        volumes:
+            - {{loki_config_path}}:/etc/loki

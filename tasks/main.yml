@@ -1,0 +1,16 @@
+---
+# tasks file for is-monitor-loki
+
+- name: Create folder
+  file:
+    path: "{{loki_config_path}}"
+    state: directory
+
+- name: Copy configuration
+  copy:
+    src: loki-config.yaml
+    dest: "{{loki_config_path}}/local-config.yaml"
+
+- name: Deploy Kafka Rest Proxy service
+  include_role:
+    name: "vyacheslavisaev.deploy_docker_compose_service"

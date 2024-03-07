@@ -1,0 +1,6 @@
+---
+# defaults file for is-monitor-loki
+loki_config_path: /etc/is/loki
+loki_config_file: loki-config.yaml
+loki_port: 3100
+promtail_config_file: promtail-config.yaml

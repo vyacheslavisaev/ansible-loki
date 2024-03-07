@@ -1,0 +1,6 @@
+---
+# vars file for is-monitor-loki
+service_name:  "loki"
+docker_compose_src: "loki-compose.yml.j2"
+service_ports:
+  "{{loki_port}}": "{{loki_port}}"
